@@ -6,14 +6,23 @@
 //
 
 import SwiftUI
+import RomanizedHebrew
 
 struct ContentView: View {
+    @State private var romanText = "KThR"
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        let heb = unromanizeHebrew(romanText)
+        Form {
+            TextField("Romanized", text: $romanText)
+            LabeledContent("Hebrew") {
+                Text(heb).font(.system(.largeTitle,design: .serif))
+            }
+            Button("Copy To Clipboard") {
+                let pbgen = NSPasteboard.general
+                pbgen.clearContents()
+                pbgen.setString(heb, forType: .string)
+            }
         }
         .padding()
     }

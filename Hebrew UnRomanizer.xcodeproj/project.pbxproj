@@ -11,6 +11,7 @@
 		834B0C002AB56A53006C1FB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B0BFF2AB56A53006C1FB1 /* ContentView.swift */; };
 		834B0C022AB56A54006C1FB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 834B0C012AB56A54006C1FB1 /* Assets.xcassets */; };
 		834B0C052AB56A54006C1FB1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 834B0C042AB56A54006C1FB1 /* Preview Assets.xcassets */; };
+		834B0C0E2AB56B48006C1FB1 /* RomanizedHebrew in Frameworks */ = {isa = PBXBuildFile; productRef = 834B0C0D2AB56B48006C1FB1 /* RomanizedHebrew */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				834B0C0E2AB56B48006C1FB1 /* RomanizedHebrew in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,9 @@
 			dependencies = (
 			);
 			name = "Hebrew UnRomanizer";
+			packageProductDependencies = (
+				834B0C0D2AB56B48006C1FB1 /* RomanizedHebrew */,
+			);
 			productName = "Hebrew UnRomanizer";
 			productReference = 834B0BFA2AB56A53006C1FB1 /* Hebrew UnRomanizer.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 834B0BF12AB56A53006C1FB1;
+			packageReferences = (
+				834B0C0C2AB56B48006C1FB1 /* XCRemoteSwiftPackageReference "RomanizedHebrew" */,
+			);
 			productRefGroup = 834B0BFB2AB56A53006C1FB1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,13 +273,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Hebrew UnRomanizer/Hebrew_UnRomanizer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Hebrew UnRomanizer/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -290,13 +300,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Hebrew UnRomanizer/Hebrew_UnRomanizer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Hebrew UnRomanizer/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -332,6 +344,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		834B0C0C2AB56B48006C1FB1 /* XCRemoteSwiftPackageReference "RomanizedHebrew" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rwtodd/RomanizedHebrew.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		834B0C0D2AB56B48006C1FB1 /* RomanizedHebrew */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 834B0C0C2AB56B48006C1FB1 /* XCRemoteSwiftPackageReference "RomanizedHebrew" */;
+			productName = RomanizedHebrew;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 834B0BF22AB56A53006C1FB1 /* Project object */;
 }
