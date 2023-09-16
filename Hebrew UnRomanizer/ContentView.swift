@@ -9,7 +9,7 @@ import SwiftUI
 import RomanizedHebrew
 
 struct ContentView: View {
-    @State private var romanText = "KThR"
+    @State private var romanText = "B*;R2AShr1ITh"
     
     var body: some View {
         let heb = unromanizeHebrew(romanText)
